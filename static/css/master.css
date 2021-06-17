@@ -1,8 +1,64 @@
-@font-face {
-    font-family: 'inconsolata';
-    src: url('static/fonts/Inconsolata/Inconsolata-Regular.ttf') format('truetype');
-}
+@import url('https://fonts.googleapis.com/css2?family=Inconsolata:wght@300&display=swap');
+
 
 html {
-    font-family: inconsolata;
+    font-family: 'Inconsolata', monospace;
 }
+
+body {
+    padding: 0;
+    margin: 0;
+}
+
+.main {
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    flex-flow: row nowrap;
+}
+
+.left {
+    width: 30%;
+    height: 100%;
+}
+
+.right {
+    width: 70%;
+    height: 100%;
+}
+
+.header {
+    padding: 1em;
+    display: flex;
+    flex-flow: column nowrap;
+    height: 25%;
+}
+
+.head{
+    font-size: 5em;
+    margin-top: 0.1em;
+    margin-bottom: 0.5em;
+}
+
+.right {
+    float: right;
+}
+
+#time-container {
+    position: absolute;
+    right: 0;
+    padding: 1em;
+    display: flex;
+    flex-flow: column nowrap;
+    height: 25%;
+}
+
+#time{
+    font-size: 7em;
+}
+
+#date {
+    text-align: right;
+    font-size: 2em;
+}
+
