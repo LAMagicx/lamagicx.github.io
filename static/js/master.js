@@ -1,3 +1,13 @@
+function search(ele) {
+    var url = "https://duckduckgo.com/?q=";
+    if (event.key === 'Enter') {
+        if (navigator.userAgent.indexOf("Chrome") !== -1) {
+            url = "https://www.google.com/search?q="; 
+        }
+        window.location.href = url + ele.value.split(" ").join("+");
+    }
+}
+
 function getTime() {
     let d = new Date();
     return d.toLocaleTimeString()
@@ -15,5 +25,8 @@ function updateTime() {
 }
 
 function load() {
+    updateTime();
     setInterval(updateTime, 1000);
 }
+
+

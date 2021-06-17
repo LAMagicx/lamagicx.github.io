@@ -45,7 +45,6 @@ body {
 }
 
 #time-container {
-    position: absolute;
     right: 0;
     padding: 1em;
     display: flex;
@@ -55,10 +54,45 @@ body {
 
 #time{
     font-size: 7em;
+    text-align: right;
 }
 
 #date {
     text-align: right;
     font-size: 2em;
+}
+
+
+.search > div > input {
+	color: black;
+	font-size: 16px;
+	font-family: 'Inconsolata', monospace;
+	background: transparent;
+	width: 25px;
+	height: 25px;
+	padding: 10px;
+	border: solid 3px black;
+	outline: none;
+	border-radius: 35px;
+	transition: all 0.5s;
+    left: 25%;
+    position: relative;
+}
+
+.search > div > input::placeholder {
+	color: #121212;
+	opacity: 0;
+	transition: opacity 150ms ease-out;
+}
+
+.search > div > input:focus::placeholder {
+	opacity: 1;
+}
+
+.search > div > input:focus,
+.search > div > input:not(:placeholder-shown) {
+	padding: 10px 10px 10px 15px;
+	width: 50%;
+    left: 0%;
 }
 
