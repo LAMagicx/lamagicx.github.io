@@ -17,9 +17,7 @@
                     <div>
                         <span class="head right">Magic</span> 
                     </div>
-                    
                 </div>
-                
             </div>
             <div class="right">
                 <div id="time-container">
@@ -28,9 +26,21 @@
                     <span id="date">
                     </span>
                 </div>
-                <div class="search">
-                    <div>
-                        <input id="search" onkeydown="search(this)" type="text" placeholder="Search . . ." required>
+                <div class="labels">
+                    <div class="link search">
+                        <div>
+                            <input id="search" onkeydown="search(this)" type="text" placeholder="Search . . ." required autocomplete="off">
+                        </div>
+                    </div>
+                    <div class="link youtube">
+                        <div>
+                            <input type="text" value="Youtube" name="youtube" id="youtube" readonly onClick="window.location='http://www.youtube.com'"/>
+                        </div> 
+                    </div>
+                    <div class="link netflix">
+                        <div>
+                            <input type="text" value="Netflix" name="netflix" id="netflix" readonly onClick="window.location='http://www.netflix.com'"/>
+                        </div> 
                     </div>
                 </div>
             </div>
