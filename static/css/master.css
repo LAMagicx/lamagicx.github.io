@@ -63,6 +63,7 @@ body {
 }
 
 .link > div > input {
+    user-select: none;
     cursor: pointer;
 	color: black;
 	font-size: 42px;
@@ -83,6 +84,14 @@ body {
 	transition: all 0.5s;
 }
 
+.search > div > input {
+    background-size: cover;
+    background-color: rgb(255,255,255);
+    background-origin: content-box;
+    background-repeat: no-repeat;
+    background-image: url("https://www.pngfind.com/pngs/m/59-593293_search-zoom-magnifier-magnifying-glass-comments-search-icon.png");
+}
+
 .link > div > input::placeholder {
 	opacity: 0;
 	transition: opacity 150ms ease-out;
@@ -95,45 +104,75 @@ body {
 .search > div > input:focus,
 
 .search > div > input:not(:placeholder-shown) {
+    background: none;
+    background-color: rgb(255,255,255);
 	padding: 10px 10px 10px 15px;
 	width: 50%;
     left: 0%;
 }
 
 .youtube > div > input {
+    background-size: cover;
+    background-color: rgb(255,0,0);
+    background-origin: border-box;
+    background-image: url("https://www.pinclipart.com/picdir/middle/530-5305994_icon-youtube-logo-png-clipart.png");
+}
+
+.youtube > div > input:hover {
+    background: none;
     background-color: rgb(255,0,0);
     color: rgb(40, 40, 40);
     font-weight: 1000;
     text-align: center;
-}
-
-.youtube > div > input:hover {
-    opacity: 1;
     width: 23%;
     left: 15%;
-    color: rgb(40, 40, 40);
 }
 
 .youtube > div > input:not(:hover) {
-    color: rgb(255,0,0);
+    color: rgba(255,0,0,0);
 }
 
 
 .netflix > div > input {
+    background-size: cover;
     background-color: rgb(229,9,20);
-    color: rgb(40, 40, 40);
-    font-weight: 1000;
-    text-align: center;
+    background-origin: border-box;
+    background-image: url("https://e1.pngegg.com/pngimages/10/90/png-clipart-clay-os-6-a-macos-icon-netflix-netflix-logo.png");
 }
 
 .netflix > div > input:hover {
-    opacity: 1;
+    background: none;
+    background-color: rgb(229,9,20);
+    font-weight: 1000;
+    text-align: center;
     width: 23%;
     left: 15%;
     color: rgb(40, 40, 40);
 }
 
 .netflix > div > input:not(:hover) {
-    color: rgb(229,9,20);
+    color: rgba(229,9,20,0);
+}
+
+
+.github > div > input {
+    background-color: rgb(34, 39, 46);
+    background-size: cover;
+    background-image: url("https://avatars.githubusercontent.com/u/41451918?v=4");
+}
+
+.github > div > input:hover {
+    color: rgb(40, 40, 40);
+    font-weight: 1000;
+    text-align: center;
+    background: none;
+    background-color: rgb(34, 39, 46);
+    width: 23%;
+    left: 15%;
+    color: rgb(200,200,200);
+}
+
+.github > div > input:not(:hover) {
+    color: rgba(229,9,20,0);
 }
 
