@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Inconsolata:wght@300&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Space+Mono&display=swap');
 
 
 html {
@@ -6,173 +6,39 @@ html {
 }
 
 body {
-    padding: 0;
+	background-color: #1D1F21;
+	font-family: 'Space Mono', monospace;
+	font-size: 2em;
+	color: #E9E9E9;
+	width: 99vw;
+}
+
+a {
+	color: #E9E9E9;
+    display: contents;
+    position: absolute;
+}
+
+span {
+	font-size: 1em !important;
+}
+
+div {
     margin: 0;
+    padding: 0;
 }
 
-.main {
-    width: 100vw;
-    height: 100vh;
+header > div {
+   display: inline-flex;
+   padding: 0.5em;
+}
+
+header {
     display: flex;
-    flex-flow: row nowrap;
+    justify-content: space-between;
 }
 
-.left {
-    width: 30%;
-    height: 100%;
+header, header h3 {
+    margin: 0;
+    padding: 0;
 }
-
-.right {
-    width: 70%;
-    height: 100%;
-}
-
-.header {
-    padding: 1em;
-    display: flex;
-    flex-flow: column nowrap;
-    height: 25%;
-}
-
-.head{
-    font-size: 5em;
-    margin-top: 0.1em;
-    margin-bottom: 0.5em;
-}
-
-.right {
-    float: right;
-}
-
-#time-container {
-    right: 0;
-    padding: 1em;
-    display: flex;
-    flex-flow: column nowrap;
-    height: 25%;
-}
-
-#time{
-    font-size: 7em;
-    text-align: right;
-}
-
-#date {
-    text-align: right;
-    font-size: 2em;
-}
-
-.link > div > input {
-    user-select: none;
-    cursor: pointer;
-	color: black;
-	font-size: 42px;
-	font-family: 'Inconsolata', monospace;
-	background: transparent;
-	width: 42px;
-	height: 42px;
-	padding: 10px;
-	border: solid 3px black;
-	outline: none;
-	border-radius: 35px;
-	transition: all 0.3s cubic-bezier(0.6, -0.28, 0.74, 0.05);
-    left: 25%;
-    position: relative;
-}
-
-.search {
-	transition: all 0.5s;
-}
-
-.search > div > input {
-    background-size: cover;
-    background-color: rgb(255,255,255);
-    background-origin: content-box;
-    background-repeat: no-repeat;
-    background-image: url("https://www.pngfind.com/pngs/m/59-593293_search-zoom-magnifier-magnifying-glass-comments-search-icon.png");
-}
-
-.link > div > input::placeholder {
-	opacity: 0;
-	transition: opacity 150ms ease-out;
-}
-
-.search > div > input:focus::placeholder {
-	opacity: 1;
-}
-
-.search > div > input:focus,
-
-.search > div > input:not(:placeholder-shown) {
-    background: none;
-    background-color: rgb(255,255,255);
-	padding: 10px 10px 10px 15px;
-	width: 50%;
-    left: 0%;
-}
-
-.youtube > div > input {
-    background-size: cover;
-    background-color: rgb(255,0,0);
-    background-origin: border-box;
-    background-image: url("https://www.pinclipart.com/picdir/middle/530-5305994_icon-youtube-logo-png-clipart.png");
-}
-
-.youtube > div > input:hover {
-    background: none;
-    background-color: rgb(255,0,0);
-    color: rgb(40, 40, 40);
-    font-weight: 1000;
-    text-align: center;
-    width: 23%;
-    left: 15%;
-}
-
-.youtube > div > input:not(:hover) {
-    color: rgba(255,0,0,0);
-}
-
-
-.netflix > div > input {
-    background-size: cover;
-    background-color: rgb(229,9,20);
-    background-origin: border-box;
-    background-image: url("https://e1.pngegg.com/pngimages/10/90/png-clipart-clay-os-6-a-macos-icon-netflix-netflix-logo.png");
-}
-
-.netflix > div > input:hover {
-    background: none;
-    background-color: rgb(229,9,20);
-    font-weight: 1000;
-    text-align: center;
-    width: 23%;
-    left: 15%;
-    color: rgb(40, 40, 40);
-}
-
-.netflix > div > input:not(:hover) {
-    color: rgba(229,9,20,0);
-}
-
-
-.github > div > input {
-    background-color: rgb(34, 39, 46);
-    background-size: cover;
-    background-image: url("https://avatars.githubusercontent.com/u/41451918?v=4");
-}
-
-.github > div > input:hover {
-    color: rgb(40, 40, 40);
-    font-weight: 1000;
-    text-align: center;
-    background: none;
-    background-color: rgb(34, 39, 46);
-    width: 23%;
-    left: 15%;
-    color: rgb(200,200,200);
-}
-
-.github > div > input:not(:hover) {
-    color: rgba(229,9,20,0);
-}
-
