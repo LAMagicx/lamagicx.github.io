@@ -10,35 +10,100 @@ body {
 	font-family: 'Space Mono', monospace;
 	font-size: 2em;
 	color: #E9E9E9;
-	width: 99vw;
+    padding: 0;
+    margin: 0;
 }
 
 a {
 	color: #E9E9E9;
-    display: contents;
     position: absolute;
+    display: block;
 }
 
-span {
-	font-size: 1em !important;
-}
-
-div {
+p,h5 {
     margin: 0;
-    padding: 0;
-}
-
-header > div {
-   display: inline-flex;
-   padding: 0.5em;
 }
 
 header {
     display: flex;
-    justify-content: space-between;
+    flex-direction: column;
+    width: 100vw;
+    justify-content: center;
+    text-align: center;
+    
 }
 
-header, header h3 {
+header h3 {
     margin: 0;
-    padding: 0;
+    padding: 0.5em;
 }
+
+.main {
+   display: flex;
+   align-items: center;
+   justify-content: center;
+}
+
+.grid {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    width: 90%;
+}
+
+.card {
+    width: 100%;
+}
+
+.container {
+    position: relative;
+}
+
+
+.container div {
+    position: absolute;
+    width: 100%;
+    overflow: hidden;
+    z-index: 2;
+}
+
+.container h5 {
+    font-size: 1.5em;
+}
+
+.container img {
+    width: min(100%, 600px);
+}
+
+.top-left {
+    position: absolute;
+    top: 0px;
+    right: 40px;
+}
+
+@media only screen and (min-width: 600px) {
+	.container:hover h5{
+        transition: transform 200ms ease-in-out;
+		transform: translateY(0);
+	}
+
+    .container:hover img{
+        transition: filter 200ms ease-in-out;
+        filter: brightness(30%);
+        cursor:pointer;
+    }
+    .container:not(hover) img{
+        transition: filter 200ms ease-in-out;
+        transition-delay: 1s;
+        filter: brightness(100%);
+    }
+
+	.container:not(hover) h5{
+        transition: transform 200ms ease-in-out;
+        transition-delay: 1s;
+		transform: translateY(-1.5em);
+	}
+}
+
